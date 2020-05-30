@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Kanban Board</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Kanban Board</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-    <div class="boards">
-        <div class="board">
-            <h3>Todo</h3>
-            <div class="dropzone">
-                <div class="card" draggable="true">
-                    <div class="status green"></div>
-                    <div class="content"> Do videos!</div>
-                </div>
-            </div>
-        </div>
-        <div class="board">
-            <h3>In progress</h3>
-            <div class="dropzone">
-                <div class="card" draggable="true">
-                    <div class="status blue"></div>
-                    <div class="content"> Forum</div>
-                </div>
-            </div>
-        </div>
-        <div class="board">
-            <h3>Done</h3>
-            <div class="dropzone">
-                <div class="card" draggable="true">
-                    <div class="status red"></div>
-                    <div class="content"> Next Level Week</div>
-                </div>
-            </div>
-        </div>
+  <div class="boards">
+    <div class="board todo">
+      <h3>To Do</h3>
+      <div class="dropzone 1">
+        
+      </div>
     </div>
+    <div class="board inProgress">
+      <h3>In Progress</h3>
+      <div class="dropzone 2">
+        
+      </div>
+    </div><div class="board done">
+      <h3>Done</h3>
+      <div class="dropzone 3">
+        
+      </div>
+    </div>
+  </div>
+  <div class='garbage'>
+    <label ><i class="icon" data-feather="trash-2"></i></label>
+  </div>
+  <div class='new-item'>
+    <input type="text" class="new-input" placeholder="Novo Item"></input>
+    <button class="confirm">
+    </button>
+  </div>
 
-    <script src="script.js" defer></script>
-    
+  <script src="script.js" defer></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace()
+  </script>
 </body>
+
 </html>

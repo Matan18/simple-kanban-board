@@ -1,82 +1,111 @@
-html {
-    font-family: 'Nunito';
+html{
+  font-family:'Nunito';
+}
+body{
+  background-color: #130f0d;
+  color:white;
+  position: relative;
+  width: 95%;
+  height: 90vh;
+}
+.boards{
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 32px;
+  flex-wrap: wrap;
 }
 
-body {
-    background-color: #130f0d;
-    color: white;
+.board{
+  background: #141316;
+  border:1px solid #fd951f11;
+  border-radius: 4px;
+  margin:16px 16px;
 }
 
-.boards {
-    display: flex;
-
-    margin-top: 32px;
+.board h3{
+  padding: 16px;
+  margin:0px;
+  color:#fd951fcc;
 }
-
-.board {
-    background: #141316;
-    border: 1px solid #FD951F11;
-    border-radius: 4px;
-
-    margin: 0 16px;
-}
-
-.board h3 {
-    padding: 16px;
-    margin: 0;
-    color: #FD951Fcc;
-}
-
 .dropzone {
-    padding: 16px;
-    min-width: 282px;
-    min-height: 200px;
+  padding: 16px;
+  min-width: 250px;
+  min-height: 200px;
+}
+.card{
+  padding: 16px;
+  box-shadow: 0 2px 2px -1px #fd951fcc;
+  width: 250px;
+  margin: 25px 0;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  background: #1a1a1c;
+}
+.status{
+  width: 30px;
+  height: 8px;
+  background: gray;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+.done .status{
+  background: blue;
+}
+.inProgress .status{
+  background: green;
+}
+.todo .status{
+  background: red;
+}
+.highlight{
+  background-color: #fd951f08;
+}
+.card, .dropzone{
+  transition: 0.3s;
+}
+.is-dragging{
+  cursor:move;
+  opacity: 0.3;
+}
+.is-over{
+  background-color: #4cd13711;
+}
+.new-item{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  position: fixed;
+  bottom: 40px;
 }
 
-.card {
-    background-color: #1A1A1C;
-    padding: 16px;
-    box-shadow: 0 2px 2px -1px #FD951Fcc;
-    width: 250px;
-    margin: 25px 0;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 18px;
+.garbage{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 95%;
+  bottom: 40px;
+}
+label{
+  color:#7519c1;
+}
+.icon{
+  width: 45px;
+  height: 45px;
 }
 
-.status {
-    width: 30px;
-    height: 8px;
-    background: gray;
-    margin-bottom: 16px;
-    border-radius: 8px;
+button{
+  height: 21px;
+  width: 21px;
+  background-color: #7159c1;
 }
 
-.status.green {
-    background: #23d2ac;
+@media(max-width:480px){
+  .boards{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.status.blue {
-    background: #33adff;
-}
-
-.status.red {
-    background: red;
-}
-
-.highlight {
-    background-color: #FD951F08;
-}
-
-.card, .dropzone {
-    transition: 400ms;
-}
-
-.is-dragging {
-    cursor: move;
-    opacity: 0.3;
-}
-
-.over {
-    background-color: #4cd13711;
-}

@@ -1,0 +1,18 @@
+{
+  "name": "nextlevelmasterclass16",
+  "version": "1.0.0",
+  "description": "Creating an electron app with masterclass16 upping to set state of the do list",
+  "main": "index.js",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "electron": "^10.0.0-beta.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC"
+}
