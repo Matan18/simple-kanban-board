@@ -78,6 +78,7 @@ function loadCardEvents() {
   }
   function dragend() {
     dropzones.forEach(dropzone => dropzone.classList.remove('highlight'))
+    garbage.classList.remove('highlight')
     this.classList.remove('is-dragging')
   }
 }
